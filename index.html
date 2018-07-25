@@ -29,6 +29,10 @@
 <body>
 	<div class="headerBar" id="headerBar">
 		<div class="logo">Cartography Suite</div>
+		<div class="themeSwitch" id="themeSwitch">
+			<a href="#">Theme</a>
+		</div>
+
         <a href="#menu-toggle" class="btn btn-secondary menuToggleButton" id="menu-toggle"><i class="fa fa-bars"></i></a>
 	</div>
     <div id="wrapper">
@@ -64,8 +68,7 @@
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
-                <h1>Welcome</h1>
-                <p>Cartography Suite is coming soon...</p>
+                <div id="map"></div>
 
             </div>
         </div>
@@ -78,8 +81,28 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Menu Toggle Script -->
+
+
     <script>
+      var map;
+      function initMap() {
+
+      	var skiathos = {lat: 39.163520, lng: 23.490167};
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: skiathos,
+          zoom: 8
+        });
+
+        var marker = new google.maps.Marker({position: skiathos, map: map});
+
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmhOeqmNPExVtSfaIjvRnbEjdRvVUHJNw
+&callback=initMap"
+    async defer></script>
+
+    <!-- Menu Toggle Script -->
+    <script>   	
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
