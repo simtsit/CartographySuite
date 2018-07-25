@@ -1,15 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charest="utf-8">
-		<meta name="title" content="Cartography Suite Demo">
-		<meta name="description" content="Welcome to Cartography Suite Demo.">
 
-		<link rel="stylesheet" href="css/style.css">
+<head>
 
-		<title>Welcome to Cartography Suite</title>
-	</head>
-	<body>
-		Welcome to Cartography Suite!
-	</body>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<title>Welcome to Cartography Suite</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- Custom Cartography Suite style -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Font awesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+	<div class="headerBar" id="headerBar">
+		<div class="logo">Cartography Suite</div>
+        <a href="#menu-toggle" class="btn btn-secondary menuToggleButton" id="menu-toggle"><i class="fa fa-bars"></i></a>
+	</div>
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Shortcuts</a>
+                </li>
+                <li>
+                    <a href="#">Overview</a>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <h1>Welcome</h1>
+                <p>Cartography Suite is coming soon...</p>
+
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
 </html>
+
+
+
+
+
+
+
+
+
